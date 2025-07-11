@@ -1,0 +1,85 @@
+.leaflet-container {
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(124, 58, 237, 0.2),
+    0 8px 10px -6px rgba(124, 58, 237, 0.1);
+  overflow: hidden;
+  border: 1px solid rgba(124, 58, 237, 0.1);
+}
+
+.leaflet-popup-content {
+  margin: 8px 12px;
+  min-width: 180px;
+}
+
+.leaflet-popup-tip {
+  background-color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pulse-marker {
+  animation: pulse 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(124, 58, 237, 0.1) 25%,
+    rgba(124, 58, 237, 0.2) 37%,
+    rgba(124, 58, 237, 0.1) 63%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.leaflet-marker-icon {
+  transition: transform 0.3s ease;
+}
+
+.leaflet-marker-icon:hover {
+  transform: scale(1.2) translateY(-5px);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(124, 58, 237, 0.1);
+  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.1);
+}
